@@ -1,7 +1,6 @@
 FROM ubuntu:xenial
 
 RUN mkdir /workspace
-RUN mkdir /workspace/notebooks
 
 WORKDIR /workspace
 
@@ -24,3 +23,6 @@ RUN apt-get install -y python$PYTHON_VERSION python$PYTHON_VERSION-dev \
     && pip install --upgrade pip \
     && pip install numpy==1.12.1 matplotlib==2.0.2 pandas==0.20.2 \
     && pip install jupyter ipython
+
+COPY run_jupyter.sh /usr/local/bin/run_jupyter
+RUN chmod +x /usr/local/bin/run_jupyter
