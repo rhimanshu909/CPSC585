@@ -18,7 +18,7 @@ The difference between a full virtual machine versus Docker is depicted in the i
 ## Test if docker is properly installed.
 
 ```
-docker run hello world
+docker run hello-world
 ```
 
 ## List of common docker commands
